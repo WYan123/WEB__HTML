@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+</head>
+<body>
+<!--
+       form：用于定义表单的。可以定义一个范围，范围代表采集用户数据的范围，比如将密码放在form的外面，那么密码不会被采集和提交
+           * 属性：
+               * action：指定提交数据的URL
+               * method:指定提交方式
+                   * 分类：一共7种，2种比较常用
+                       get：
+                           1. 请求参数会在地址栏中显示。会封装到请求行中(HTTP协议后讲解)。（写网址地方）
+                           2. 请求参数大小是有限制的。
+                           3. 不太安全。
+                       post：
+                           2. 请求参数不会再地址栏中显示。会封装在请求体中(HTTP协议后讲解)
+                           2. 请求参数的大小没有限制。
+                           3. 较为安全。
+
+           * 表单项中的数据要想被提交：必须指定其name属性
+
+   -->
+
+<form action="#" method="get">
+
+    用户名:<input   name="username" placeholder="请输入你的名字"><br><!--用户提示信息 -->
+    密码：<input name="password"><br>
+    性别<input  type="radio" name="gender" value="male">男   <!--radio代表单选框 如果没有value则值都是on  属性可以默认 值为checed-->
+    <input  type="radio" name="gender" value="female">女<br>
+    爱好:<input type="checkbox"name="hobby" value="da">打篮球
+    爱好:<input type="checkbox"name="hobby" value="qiu">羽毛球
+    爱好:<input type="checkbox"name="hobby" value="taiqiu">台球<br>
+    <input type="submit" value="登录" ><br>
+</form>
+
+</body>
+</html>
